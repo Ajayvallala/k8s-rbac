@@ -4,7 +4,7 @@ metadata:
  name: fetch-secret
  namespace: roboshop
 spec:
- serviceaAccount: roboshop-mysql-secret-reader
+ serviceAccountName: roboshop-mysql-secret-reader
  containers:
   - name: secret-reader
     image: amazon/aws-cli
