@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: fetch-secret
+ namespace: roboshop
+spec:
+ serviceaAccount: roboshop-mysql-secret-reader
+ containers:
+  - name: secret-reader
+    image: amazon/aws-cli
+    command: ["sleep", "10000"]
